@@ -24,8 +24,8 @@ set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to FPGA_CLK1_50
 set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to FPGA_CLK2_50
 set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to FPGA_CLK3_50
 set_location_assignment PIN_V11 -to FPGA_CLK1_50
-set_location_assignment PIN_E11 -to FPGA_CLK2_50
-set_location_assignment PIN_Y13 -to FPGA_CLK3_50
+set_location_assignment PIN_Y13 -to FPGA_CLK2_50
+set_location_assignment PIN_E11 -to FPGA_CLK3_50
 
 #============================================================
 # SPI SD
@@ -133,6 +133,11 @@ set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HDMI_TX_D[22]
 set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HDMI_TX_D[23]
 set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HDMI_TX_HS
 set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HDMI_TX_VS
+#set_instance_assignment -name FAST_OUTPUT_REGISTER ON -to HDMI_TX_D[*]
+#set_instance_assignment -name FAST_OUTPUT_REGISTER ON -to HDMI_TX_DE
+#set_instance_assignment -name FAST_OUTPUT_REGISTER ON -to HDMI_TX_HS
+#set_instance_assignment -name FAST_OUTPUT_REGISTER ON -to HDMI_TX_VS
+#set_instance_assignment -name FAST_OUTPUT_REGISTER ON -to HDMI_TX_CLK
 set_location_assignment PIN_U10 -to HDMI_I2C_SCL
 set_location_assignment PIN_AA4 -to HDMI_I2C_SDA
 set_location_assignment PIN_T13 -to HDMI_I2S
