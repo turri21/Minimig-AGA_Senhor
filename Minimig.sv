@@ -159,11 +159,11 @@ module emu
 	input         OSD_STATUS
 );
 
-assign ADC_BUS  = 'Z;
-assign {SD_SCK, SD_MOSI, SD_CS} = 'Z;
-assign BUTTONS = 0;
-assign VGA_DISABLE = 0;
-assign HDMI_FREEZE = 0;
+//assign ADC_BUS  = 'Z;
+//assign {SD_SCK, SD_MOSI, SD_CS} = 'Z;
+//assign BUTTONS = 0;
+//assign VGA_DISABLE = 0;
+//assign HDMI_FREEZE = 0;
 
 `include "build_id.v" 
 localparam CONF_STR = {
@@ -171,7 +171,7 @@ localparam CONF_STR = {
 	"J,Red(Fire),Blue,Yellow,Green,RT,LT,Pause;",
 	"jn,A,B,X,Y,R,L,Start;",
 	"jp,B,A,X,Y,R,L,Start;",
-	"-;",
+	"-   ;",
 	"I,",
 	"MT32-pi: SoundFont #0,",
 	"MT32-pi: SoundFont #1,",
