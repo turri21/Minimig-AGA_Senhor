@@ -1,7 +1,3 @@
--=(Minimig-AGA_Senhor notes)=-
-
-Tested: Working Video 720p, 1080p & Sound
-
 # Minimig-AGA_MiSTer
 
 This is a port of the minimig core to the [MiSTer board](https://github.com/MiSTer-devel).
