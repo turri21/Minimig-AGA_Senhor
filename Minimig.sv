@@ -159,8 +159,8 @@ module emu
 	input         OSD_STATUS
 );
 
-//assign ADC_BUS  = 'Z;
-//assign {SD_SCK, SD_MOSI, SD_CS} = 'Z;
+assign ADC_BUS  = 'Z;
+assign {SD_SCK, SD_MOSI, SD_CS} = 'Z;
 assign BUTTONS = 0;
 assign VGA_DISABLE = 0;
 assign HDMI_FREEZE = 0;
