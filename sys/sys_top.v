@@ -25,16 +25,13 @@ module sys_top
 	input         FPGA_CLK1_50,
 	input         FPGA_CLK2_50,
 	input         FPGA_CLK3_50,
-
 	//////////// HDMI //////////
 	output        HDMI_I2C_SCL,
 	inout         HDMI_I2C_SDA,
-
 	output        HDMI_MCLK,
 	output        HDMI_SCLK,
 	output        HDMI_LRCLK,
 	output        HDMI_I2S,
-
 	output        HDMI_TX_CLK,
 	output        HDMI_TX_DE,
 	output [23:0] HDMI_TX_D,
@@ -42,7 +39,6 @@ module sys_top
 	output        HDMI_TX_VS,
 	
 	input         HDMI_TX_INT,
-
 	//////////// SDR ///////////
 	output [12:0] SDRAM_A,
 	inout  [15:0] SDRAM_DQ,
@@ -55,7 +51,6 @@ module sys_top
 	output  [1:0] SDRAM_BA,
 	output        SDRAM_CLK,
 //	output        SDRAM_CKE,
-
 `ifdef DUAL_SDRAM
 	////////// SDR #2 //////////
 //	output [12:0] SDRAM2_A,
@@ -66,7 +61,6 @@ module sys_top
 //	output        SDRAM2_nCS,
 //	output  [1:0] SDRAM2_BA,
 //	output        SDRAM2_CLK,
-
 `else
 	//////////// VGA ///////////
 //	output  [5:0] VGA_R,
@@ -75,17 +69,14 @@ module sys_top
 //	inout         VGA_HS,  // VGA_HS is secondary SD card detect when VGA_EN = 1 (inactive)
 //	output		  VGA_VS,
 //	input         VGA_EN,  // active low
-
 	/////////// AUDIO //////////
 //	output		  AUDIO_L,
 //	output		  AUDIO_R,
 //	output		  AUDIO_SPDIF,
-
 	//////////// SDIO ///////////
 //	inout   [3:0] SDIO_DAT,
 //	inout         SDIO_CMD,
 //	output        SDIO_CLK,
-
 	//////////// I/O ///////////
 //	output        LED_USER,
 //	output        LED_HDD,
@@ -94,7 +85,6 @@ module sys_top
 //	input         BTN_OSD,
 //	input         BTN_RESET,
 `endif
-
 	////////// I/O ALT /////////
 //	output        SD_SPI_CS,
 //	input         SD_SPI_MISO,
@@ -104,42 +94,33 @@ module sys_top
 //	inout         SDCD_SPDIF,
 //	output        IO_SCL,
 //	inout         IO_SDA,
-
 	////////// ADC //////////////
 //	output        ADC_SCK,
 //	input         ADC_SDO,
 //	output        ADC_SDI,
 //	output        ADC_CONVST,
-
 	////////// MB KEY ///////////
 	input   [1:0] KEY,
-
 	////////// MB SWITCH ////////
 	input   [3:0] SW,
-
 	////////// MB LED ///////////
 	output  [7:0] LED
-
 	///////// USER IO ///////////
 //	inout   [6:0] USER_IO
 );
 
 ///////////////////////// Senhor: Initializations ////////////////////////
-
 wire [5:0] VGA_R;
 wire [5:0] VGA_G;
 wire [5:0] VGA_B;
 wire VGA_HS;
 wire VGA_VS;
 wire VGA_EN = 1'b1;
-
 wire [3:0] SDIO_DAT;
 wire SDIO_CMD = 1'b1;
 wire [6:0] USER_IO;
 wire SD_SPI_MISO = 1'b1;
-
 wire BTN_RESET = 1'b1, BTN_OSD = 1'b1, BTN_USER = 1'b1;
-
 /////////////////////////////////////////////////////////////////////////
 
 //////////////////////  Secondary SD  ///////////////////////////////////
